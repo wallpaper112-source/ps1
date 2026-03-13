@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Uploader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Uploader</h1>
+        <input type="file" id="image-upload" accept="image/*">
+        <button id="upload-button">Upload Image</button>
+        <div class="message" id="message"></div>
+    </div>
+    <script>
+        document.getElementById('upload-button').onclick = function() {
+            const fileInput = document.getElementById('image-upload');
+            const messageDiv = document.getElementById('message');
+            if (fileInput.files.length === 0) {
+                messageDiv.innerHTML = 'Please select an image to upload.';
+                return;
+            }
+            // Your upload logic here
+            messageDiv.innerHTML = 'Image uploaded successfully!';
+        };
+    </script>
+</body>
+</html>
