@@ -1,0 +1,15 @@
+# GitHub Ignore File
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Xcode
+*.xcuserstate
+*.xcworkspace
+*.xcuserdata/
+*.xcodeproj/
+*.ipa
+*.dSYM.zip
+*.dSYM
